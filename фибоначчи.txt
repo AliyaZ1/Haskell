@@ -1,0 +1,9 @@
+﻿-- | task: числа Фибоначчи 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
+module Fibonacci where
+
+fibonacci :: Integer -> Integer
+fibonacci x | x == 0 = 1
+            | x == 1 = 1
+            | x > 1 = fibonacci(x-2) + fibonacci(x-1)
+
+main = putStrLn (show (fibonacci 4))
